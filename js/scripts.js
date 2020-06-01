@@ -1,10 +1,17 @@
+// Business logic
+
 const leapYear = function(year) {
-  if (year % 4 === 0) {
+  
+  if (year % 100 === 0) {
+    return false;
+  } else if (year % 4 === 0) {
     return true;
   } else {
     return false;
   }
 };
+
+// User interface logic
 
 $(document).ready(function() {
   $("form#leap-year").submit(function(event) {
